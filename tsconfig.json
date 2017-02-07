@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es2015",
+    "lib": ["es2016", "dom"],
+    "moduleResolution": "node",
+    "declaration": true,
+    "declarationDir": "es",
+    "outDir": "es",
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true
+  },
+  "files": [
+    "src/index.ts"
+  ]
+}
