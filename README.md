@@ -20,7 +20,7 @@ npm install --save redux-typescript-http-middleware
 
 ```ts
 
-  import httpActionCreator from 'redux-typescript-http-middleware';
+  import { httpActionCreator } from 'redux-typescript-http-middleware';
 
   interface Account {
     name: string
@@ -48,7 +48,7 @@ To make it work, add `createAPIMiddleware()` to your middleware, in
 which you configure the API base URL:
 
 ```ts
-import { createAPIMiddleware } from "redux-typescript-http-middleware"
+import { createHttpMiddleware } from "redux-typescript-http-middleware"
 
 const baseURL = "https://example.com/api/"
 
@@ -57,7 +57,7 @@ export function configureStore() {
     rootReducer,
     {},
     applyMiddleware(
-      createAPIMiddleware(baseURL),
+      createHttpMiddleware(baseURL),
     )
   )
 
