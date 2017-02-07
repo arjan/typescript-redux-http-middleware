@@ -42,6 +42,29 @@ npm install --save redux-typescript-http-middleware
   dispatch(getAccount("user_id"))
 ```
 
+### Middleware configuration
+
+To make it work, add `createAPIMiddleware()` to your middleware, in
+which you configure the API base URL:
+
+```ts
+import { createAPIMiddleware } from "redux-typescript-http-middleware"
+
+const baseURL = "https://example.com/api/"
+
+export function configureStore() {
+  const store = createStore(
+    rootReducer,
+    {},
+    applyMiddleware(
+      createAPIMiddleware(baseURL),
+    )
+  )
+
+  return store
+}
+```
+
 ### Reducer
 
 ```ts
