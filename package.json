@@ -1,8 +1,10 @@
 {
   "name": "redux-typescript-http-middleware",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "HTTP middleware for Redux",
-  "main": "lib/index.ts",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "jsnext:main": "es/index.js",
   "scripts": {
     "clean": "rimraf lib es",
     "lint": "tslint -c tslint.json src/**/*.ts tests/**/*.ts",
